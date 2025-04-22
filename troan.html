@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="ru">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>ЕХЕХЕ, ПОПАЛСЯ</title>
-  <link rel="stylesheet" href="slyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный сайт</title>
 </head>
 <body>
-  <header>
-    <div class="phone">
-    <h1>
-     Ахаха, вот ты и тут
-    </h1>
-    </div>
-  </header>
-  <audio src="kaka.mp3" autoplay="autoplay">
+    <h1></h1>
+    
+    <audio id="audioPlayer" autoplay loop>
+        <source src="kaka.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудиофайлы.
+    </audio>
+
+    <script>
+        // Попробуйте запускать музыку с учетом взаимодействия пользователя
+        document.addEventListener('click', function() {
+            var audio = document.getElementById('audioPlayer');
+            audio.play();
+        });
+    </script>
 </body>
 </html>
